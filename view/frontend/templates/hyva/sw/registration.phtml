@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * See LICENSE_MONSOON.txt for license details.
+ */
+
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $escaper \Magento\Framework\Escaper */
+/** @var $viewModel Monsoon\Pwa\ViewModel\ServiceWorker */
+
+$viewModel = $block->getViewModel();
+?>
+<script defer>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/' + "<?= $escaper->escapeUrl($viewModel->getServiceWorkerPath())?>");
+    }
+</script>

@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * See LICENSE_MONSOON.txt for license details
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <container name="root">
+        <block name="service-worker.js" template="Monsoon_Pwa::service-worker.js.phtml">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Monsoon\Pwa\ViewModel\ServiceWorker</argument>
+            </arguments>
+        </block>
+    </container>
+</layout>

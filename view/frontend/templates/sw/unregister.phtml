@@ -1,0 +1,20 @@
+<?php
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * See LICENSE_MONSOON.txt for license details.
+ */
+
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $viewModel Monsoon\Pwa\ViewModel\ServiceWorker */
+
+$viewModel = $block->getViewModel();
+?>
+<?php if ($viewModel->isUnregisterAllowed()): ?>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Monsoon_Pwa/js/unregister": {}
+        }
+    }
+</script>
+<?php endif ?>

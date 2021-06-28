@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * See LICENSE_MONSOON.txt for license details
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="monsoon" translate="label" sortOrder="100">
+            <label>Monsoon Consulting</label>
+        </tab>
+        <section id="monsoon_pwa" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>PWA</label>
+            <tab>monsoon</tab>
+            <resource>Monsoon_Pwa::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <comment><![CDATA[Register a Service Worker on the storefront]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="offline_page" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Offline Notification Page</label>
+                    <comment><![CDATA[This CMS page will be displayed to visitors when they are browsing without and internet connection.]]></comment>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="enable_ad2hs_prompt" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable ad2hs prompt</label>
+                    <comment><![CDATA[Enable <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Add_to_home_screen" target="_blank">Add to Home screen</a> prompt.]]></comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ga_offline_enable" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Offline Google Analytics</label>
+                    <comment><![CDATA[If enabled, caches any Google Analytics tracking events while the visitor is browsing offline and submits them when internet connection is restored.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="unregister_sw" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Unregister Service Worker</label>
+                    <comment><![CDATA[Unregister any service worker installed on user's browser for this website.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">0</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="caching" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Caching</label>
+            <comment><![CDATA[Configure how the service worker interacts with the Browser's <a href="https://web.dev/cache-api-quick-guide/" target="_blank">Cache API</a>.]]></comment>
+                <field id="cache_lifetime" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Cache Lifetime</label>
+                    <comment><![CDATA[Cache lifetime in seconds, eg 1 year is 31556952.<br />Number must be 1 or greater.]]></comment>
+                    <validate>required-entry validate-digits validate-digits-range digits-range-1-</validate>
+                </field>
+                <field id="cache_static_assets" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Cache Static Assets</label>
+                    <comment><![CDATA[Save assets from Magento's static/ directory in the browser's.<br />If not used the offline page will require internal/inline CSS to be added.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cache_media_assets" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Cache Media Assets</label>
+                    <comment><![CDATA[Save assets from Magento's media/ directory.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cache_google_fonts" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Cache Google Fonts</label>
+                    <comment><![CDATA[Cache Google fonts.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="lifecycle" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Lifecycle</label>
+                <comment><![CDATA[Configure the <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle" target="_blank">service worker lifecycle</a>.]]></comment>
+                <field id="sw_version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Service Worker Version</label>
+                    <comment><![CDATA[This will update the version number of the service worker and force it to be updated.<br />Not usually required as the service worker is updated whenever it changes, including after making any of the configuration changes here. <br />Number must be 1 or greater.]]></comment>
+                    <validate>required-entry validate-digits validate-digits-range digits-range-1-</validate>
+                </field>
+                <field id="enable_skip_waiting" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Skip waiting</label>
+                    <comment><![CDATA[If enabled, causes your service worker to kick out the current active worker and activate itself as soon as it enters the waiting phase.<br /><br /><strong>Caution:</strong> Skip waiting means that your new service worker is likely controlling pages that were loaded with an older version. This means some of your page's fetches will have been handled by your old service worker, but your new service worker will be handling subsequent fetches. If this might break things, don't use skipWaiting().]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable_clients_claim" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable clients.claim</label>
+                    <comment><![CDATA[Makes the service worker take control of the page when you first register a service worker.<br /><br /><strong>Note</strong> It only really matters on the very first load, and due to progressive enhancement the page is usually working happily without service worker anyway.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="unregister_sw_in_admin" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Unregister Service Worker on Admin Panel</label>
+                    <comment><![CDATA[Unregister Service Worker when user enters Admin Panel]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * See LICENSE_MONSOON.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <monsoon_pwa>
+            <general>
+                <enabled>0</enabled>
+                <offline_page>offline</offline_page>
+                <ga_offline_enable>0</ga_offline_enable>
+                <enable_ad2hs_prompt>1</enable_ad2hs_prompt>
+                <unregister_sw>0</unregister_sw>
+            </general>
+            <caching>
+                <cache_lifetime>31556952</cache_lifetime>
+                <cache_static_assets>1</cache_static_assets>
+                <cache_media_assets>1</cache_media_assets>
+                <cache_google_fonts>1</cache_google_fonts>
+            </caching>
+            <lifecycle>
+                <sw_version>1</sw_version>
+                <enable_skip_waiting>0</enable_skip_waiting>
+                <enable_clients_claim>0</enable_clients_claim>
+                <unregister_sw_in_admin>1</unregister_sw_in_admin>
+            </lifecycle>
+        </monsoon_pwa>
+    </default>
+</config>

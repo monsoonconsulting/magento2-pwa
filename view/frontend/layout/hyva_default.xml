@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * See LICENSE_MONSOON.txt for license details
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="service-worker.register" template="Monsoon_Pwa::hyva/sw/registration.phtml"/>
+        <referenceBlock name="service-worker.unregister" template="Monsoon_Pwa::hyva/sw/unregister.phtml" />
+        <referenceBlock name="service-worker.ad2hs-prompt" template="Monsoon_Pwa::hyva/sw/ad2hs-prompt.phtml" />
+    </body>
+</page>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright © Monsoon Consulting. All rights reserved.
- * See LICENSE_MONSOON.txt for license details
+ * @license   Open Software License ("OSL") v. 3.0
  */
 
 declare(strict_types=1);

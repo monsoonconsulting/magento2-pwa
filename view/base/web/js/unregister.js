@@ -1,6 +1,6 @@
 /*
  * Copyright © Monsoon Consulting. All rights reserved.
- * See LICENSE_MONSOON.txt for license details
+ * @license   Open Software License ("OSL") v. 3.0
  */
 define([
     'underscore'

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
- Copyright (c) Monsoon Consulting. All rights reserved.
- See LICENSE_MONSOON.txt for license details.
+ Copyright © Monsoon Consulting. All rights reserved.
+ @license   Open Software License ("OSL") v. 3.0
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>

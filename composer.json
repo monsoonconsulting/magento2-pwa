@@ -3,8 +3,7 @@
     "description": "Adds a service worker to Magento2 to enable PWA features.",
     "authors": [
         {
-            "name": "Ross McHugh",
-            "email": "ross.mchugh@monsoonconsulting.com"
+            "name": "Ross McHugh"
         }
     ],
     "config": {

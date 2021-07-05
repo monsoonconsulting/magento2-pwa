@@ -16,7 +16,7 @@ Adds icons, a web manifest file and service-worker file to make magento 2 a [PWA
 
 ## Installation
 ```shell
-composer require monsoon/module-pwa
+composer require monsoonconsulting/magento2-pwa
 ```
 
 ## Configuration

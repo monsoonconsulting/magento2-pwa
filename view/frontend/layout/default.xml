@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block name="service-worker" template="Monsoon_Pwa::service-worker.phtml"
+                   ifconfig="monsoon_pwa/general/enabled">
+                <block name="service-worker.register" template="Monsoon_Pwa::sw/registration.phtml">
+                    <arguments>
+                        <argument name="view_model" xsi:type="object">Monsoon\Pwa\ViewModel\ServiceWorker</argument>
+                    </arguments>
+                </block>
+                <block name="service-worker.ad2hs-prompt" template="Monsoon_Pwa::sw/ad2hs-prompt.phtml"
+                       ifconfig="monsoon_pwa/general/enable_ad2hs_prompt"/>
+            </block>
+            <block name="service-worker.unregister" template="Monsoon_Pwa::sw/unregister.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Monsoon\Pwa\ViewModel\ServiceWorker</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

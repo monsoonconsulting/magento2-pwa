@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+            <block name="service-worker.unregister-in-admin" template="Monsoon_Pwa::unregister.phtml"
+                   ifconfig="monsoon_pwa/advanced/unregister_sw_in_admin"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+ Copyright © Monsoon Consulting. All rights reserved.
+ @license   Open Software License ("OSL") v. 3.0
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" src="Monsoon_Pwa::images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="16x16" src="Monsoon_Pwa::images/favicons/favicon-16x16.png" />
+        <link rel="manifest" src="Monsoon_Pwa::manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
+    </head>
+</page>

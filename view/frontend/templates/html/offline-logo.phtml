@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © Monsoon Consulting. All rights reserved.
+ * @license   Open Software License ("OSL") v. 3.0
+ */
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+$storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt()
+?>
+<a
+    class="logo-offline"
+    href="<?= $block->escapeUrl($block->getUrl('')) ?>"
+    title="<?= $block->escapeHtmlAttr($storeName) ?>"
+    aria-label="store logo">
+    <img src="<?= $block->escapeUrl($block->getLogoSrc()) ?>"
+         title="<?= $block->escapeHtmlAttr($block->getLogoAlt()) ?>"
+         alt="<?= $block->escapeHtmlAttr($block->getLogoAlt()) ?>"
+        <?= $block->getLogoWidth() ? 'width="' . $block->escapeHtmlAttr($block->getLogoWidth()) . '"' : '' ?>
+        <?= $block->getLogoHeight() ? 'height="' . $block->escapeHtmlAttr($block->getLogoHeight()) . '"' : '' ?>
+    />
+</a>

@@ -20,7 +20,7 @@ composer require monsoon/module-pwa
 ```
 
 ## Configuration
-To configure the module go to _Stores > Configuration > Monsoon > PWA_.
+To configure the module go to _Stores > Configuration > Monsoon > PWA_.    
 ![configuration options](doc/sys-config.jpg)
 
 ### Offline Page

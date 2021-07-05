@@ -1,5 +1,5 @@
 {
-    "name": "monsoon/magento2-pwa",
+    "name": "monsoonconsulting/magento2-pwa",
     "description": "Adds a service worker to Magento2 to enable PWA features.",
     "authors": [
         {

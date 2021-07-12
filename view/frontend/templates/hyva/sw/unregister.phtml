@@ -14,9 +14,7 @@ $viewModel = $block->getViewModel();
     if (navigator.serviceWorker) {
         navigator.serviceWorker.getRegistrations().then(
             function (registrations) {
-                _.each(registrations, function (registration) {
-                    registration.unregister();
-                });
+                registrations.forEach(registration => registration.unregister());
             }
         );
     }

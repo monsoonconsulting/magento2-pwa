@@ -2,6 +2,10 @@
 <!-- Refer to: https://keepachangelog.com/en/1.0.0/ -->
 ## [Unreleased]
 
+## [1.0.2] - 2021-07-12
+### Fixed
+- invalid javascript in hyva unregister sw script 
+
 ## [1.0.1] - 2021-07-07
 ### Fixed
 - manifest.json dimensions for the maskable icon

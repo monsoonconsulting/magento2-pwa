@@ -1,6 +1,6 @@
-# Monsoon Service Worker
+# Monsoon PWA
 
-Adds icons, a web manifest file and service-worker file to make magento 2 a [PWA](https://web.dev/pwa-checklist/).
+Adds icons, a web manifest file and a service-worker file to make magento 2 a [PWA](https://web.dev/pwa-checklist/).
 
 ## Main Features
 - Supports Magento Blank and Luma as well as [Hyvä] based themes.   
@@ -32,7 +32,7 @@ In your Magento theme, override the images and PWA app details found in:
 - Monsoon/Pwa/view/frontend/web/images/favicons
 - Monsoon/Pwa/view/frontend/web/manifest.icon
 
-For generating the correct icons you there are useful tools such as 
+For generating the correct icons there are useful tools such as 
 a [favicon generator](https://realfavicongenerator.net/) and [maskable icon editor](https://maskable.app/editor).
 
 ### Configure Service Worker

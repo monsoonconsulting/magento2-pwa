@@ -1,6 +1,8 @@
 # Changelog
 <!-- Refer to: https://keepachangelog.com/en/1.0.0/ -->
 ## [Unreleased]
+### Fixed
+- Typos in README.md
 
 ## [1.0.2] - 2021-07-12
 ### Fixed

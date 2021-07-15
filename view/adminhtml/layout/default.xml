@@ -10,7 +10,7 @@
     <body>
         <referenceContainer name="after.body.start">
             <block name="service-worker.unregister-in-admin" template="Monsoon_Pwa::unregister.phtml"
-                   ifconfig="monsoon_pwa/advanced/unregister_sw_in_admin"/>
+                   ifconfig="monsoon_pwa/lifecycle/unregister_sw_in_admin"/>
         </referenceContainer>
     </body>
 </page>

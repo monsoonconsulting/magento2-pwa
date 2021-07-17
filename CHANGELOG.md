@@ -1,8 +1,12 @@
 # Changelog
 <!-- Refer to: https://keepachangelog.com/en/1.0.0/ -->
 ## [Unreleased]
+
+## [1.0.3] - 2021-07-17
 ### Fixed
 - Typos in README.md
+- config path for "Unregister Service Worker on Admin Panel"
+- ad2hs-prompt to be Hyvä compatible 
 
 ## [1.0.2] - 2021-07-12
 ### Fixed

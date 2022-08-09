@@ -1,16 +1,18 @@
 # Changelog
 <!-- Refer to: https://keepachangelog.com/en/1.0.0/ -->
 ## [Unreleased]
+### Added
+- PHP 8.1 support
 
 ## [1.0.3] - 2021-07-17
 ### Fixed
 - Typos in README.md
 - config path for "Unregister Service Worker on Admin Panel"
-- ad2hs-prompt to be Hyvä compatible 
+- ad2hs-prompt to be Hyvä compatible
 
 ## [1.0.2] - 2021-07-12
 ### Fixed
-- invalid javascript in hyva unregister sw script 
+- invalid javascript in hyva unregister sw script
 
 ## [1.0.1] - 2021-07-07
 ### Fixed

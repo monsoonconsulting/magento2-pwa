@@ -28,14 +28,16 @@ const {clientsClaim} = workbox.core;
 clientsClaim();
 <?php endif ?>
 
-// Pre-cache fallback responses
-// https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offline_page_only
-// #####################################
+/**
+ * Pre-cache fallback responses
+ * https://developers.google.com/web/tools/workbox/guides/advanced-recipes#offline_page_only
+ */
 const OFFLINE_CACHE_NAME = 'offline-html';
 const OFFLINE_FALLBACK_HTML_URL = '<?= $block->escapeUrl($viewModel->getOfflinePageUrl()) ?>';
 
-// Populate the cache with the offline HTML page when the
-// service worker is installed.
+/**
+ * Populate the cache with the offline HTML page when the service worker is installed.
+ */
 self.addEventListener('install', async (event) => {
     event.waitUntil(
         caches.open(OFFLINE_CACHE_NAME)
@@ -46,12 +48,14 @@ self.addEventListener('install', async (event) => {
 workbox.navigationPreload.enable();
 
 const networkOnly = new NetworkOnly();
+
+/**
+ * Attempt a network request. If it fails, return the cached HTML.
+ */
 const navigationHandler = async (params) => {
     try {
-        // Attempt a network request.
         return await networkOnly.handle(params);
     } catch (error) {
-        // If it fails, return the cached HTML.
         return caches.match(OFFLINE_FALLBACK_HTML_URL, {
             cacheName: OFFLINE_CACHE_NAME,
             plugins: [
@@ -67,7 +71,9 @@ const navigationHandler = async (params) => {
     }
 };
 
-// Register this strategy to handle all navigations.
+/**
+ * Register this strategy to handle all navigations.
+ */
 registerRoute(new NavigationRoute(navigationHandler));
 
 <?php if ($viewModel->isGaOfflineEnabled()): ?>
@@ -111,9 +117,10 @@ registerRoute(
 <?php endif ?>
 
 <?php if ($viewModel->isCacheGoogleFontsEnabled()): ?>
-// Cache fonts
-// https://developers.google.com/web/tools/workbox/guides/common-recipes#google_fonts
-// #####################################
+/**
+ * Cache fonts
+ * https://developers.google.com/web/tools/workbox/guides/common-recipes#google_fonts
+ */
 registerRoute(function (_ref) {
     var url = _ref.url;
     return url.origin === 'https://fonts.gstatic.com';
@@ -151,7 +158,5 @@ registerRoute(
 <?php endif ?>
 
 <?php if ($block->getChildHtml()): ?>
-// Extensions
-// #####################################
     <?= $block->getChildHtml() ?>
 <?php endif ?>

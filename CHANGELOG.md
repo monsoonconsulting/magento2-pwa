@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2022-10-24
+### Fixed
+- Code style, replaced JavaScript single line comments with
+multi-line comments to make code easier to read.
+May also help resolve cases when minify HTML is not functioning correctly, by not removing comments.
+ref: https://github.com/monsoonconsulting/magento2-pwa/issues/5
+
 ## [1.1.0] - 2022-08-17
 ### Added
 - PHP 8.1 support

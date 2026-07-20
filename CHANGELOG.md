@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-07-20
+### Fixed
+- PHP 8.4 support
+
+## [1.2.1] - 2024-12-10
+### Fixed
+- PHP 8.3 support
+
 ## [1.1.1] - 2022-10-24
 ### Fixed
 - Code style, replaced JavaScript single line comments with

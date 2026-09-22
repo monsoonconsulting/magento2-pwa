@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-09-23
+### Added
+- Add support for PHP 8.4
+### Fixed
+- Implicit nullable parameter deprecation warnings in `Model/Configuration.php` and `Model/ConfigurationInterface.php` on PHP 8.4
+
 ## [1.1.1] - 2022-10-24
 ### Fixed
 - Code style, replaced JavaScript single line comments with

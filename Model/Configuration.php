@@ -34,7 +34,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isEnabled(int $store = null): bool
+    public function isEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_ENABLED,
@@ -46,7 +46,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function getOfflinePage(int $store = null): string
+    public function getOfflinePage(?int $store = null): string
     {
         return (string)$this->scopeConfig->getValue(
             static::XML_PATH_OFFLINE_PAGE,
@@ -58,7 +58,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isGaOffLineEnabled(int $store = null): bool
+    public function isGaOffLineEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_GA_OFFLINE_ENABLED,
@@ -70,7 +70,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isUnregisterSwEnabled(int $store = null): bool
+    public function isUnregisterSwEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_UNREGISTER_SW,
@@ -82,7 +82,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function getCacheLifetime(int $store = null): string
+    public function getCacheLifetime(?int $store = null): string
     {
         return (string)$this->scopeConfig->getValue(
             static::XML_PATH_CACHE_LIFETIME,
@@ -94,7 +94,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isCacheStaticAssetsEnabled(int $store = null): bool
+    public function isCacheStaticAssetsEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_CACHE_STATIC_ASSETS,
@@ -106,7 +106,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isCacheMediaAssetsEnabled(int $store = null): bool
+    public function isCacheMediaAssetsEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_CACHE_MEDIA_ASSETS,
@@ -118,7 +118,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isCacheGoogleFontsEnabled(int $store = null): bool
+    public function isCacheGoogleFontsEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_CACHE_GOOGLE_FONTS,
@@ -130,7 +130,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function getSwVersion(int $store = null): string
+    public function getSwVersion(?int $store = null): string
     {
         return (string)$this->scopeConfig->getValue(
             static::XML_PATH_SW_VERSION,
@@ -142,7 +142,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isSkipWaitingEnabled(int $store = null): bool
+    public function isSkipWaitingEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_ENABLE_SKIP_WAITING,
@@ -154,7 +154,7 @@ class Configuration implements ConfigurationInterface
     /**
      * @inheritDoc
      */
-    public function isClientsClaimEnabled(int $store = null): bool
+    public function isClientsClaimEnabled(?int $store = null): bool
     {
         return $this->scopeConfig->isSetFlag(
             self::XML_PATH_ENABLE_CLIENTS_CLAIM,

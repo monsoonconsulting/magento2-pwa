@@ -38,7 +38,7 @@ interface ConfigurationInterface
      * @param int|string|null $store
      * @return string
      */
-    public function getOfflinePage(int $store = null): string;
+    public function getOfflinePage(?int $store = null): string;
 
     /**
      * Check if GoogleAnalytics Offline is enabled
@@ -60,7 +60,7 @@ interface ConfigurationInterface
      * @param int|string|null $store
      * @return string
      */
-    public function getCacheLifetime(int $store = null): string;
+    public function getCacheLifetime(?int $store = null): string;
 
     /**
      * Check if Cache Static Assets is to be enabled
@@ -89,7 +89,7 @@ interface ConfigurationInterface
      * @param int|string|null $store
      * @return string
      */
-    public function getSwVersion(int $store = null): string;
+    public function getSwVersion(?int $store = null): string;
 
     /**
      * Check if Skip waiting is to be enabled
